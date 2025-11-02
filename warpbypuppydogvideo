@@ -1,0 +1,15 @@
+setResolution(2560, 1440)
+
+s0.initVideo("https://videos.pexels.com/video-files/3042473/3042473-uhd_2560_1440_30fps.mp4")
+
+voronoi(10,1,5).brightness(()=>Math.random()*0.03)
+  .modulatePixelate(noise(5, 0.3),-0.3)
+.out(o0)
+
+src(s0)
+.modulateRotate(o0)
+.out(o1)
+
+render(o1)
+
+//screencap()
